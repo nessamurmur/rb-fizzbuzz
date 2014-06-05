@@ -30,4 +30,12 @@ RSpec.describe FizzBuzz do
       FizzBuzz.call(i).each { |n| expect(n % 15).to_not eq(0) unless n == "FizzBuzz" }
     }
   end
+
+  describe "running fizz_buzz.rb at the command line" do
+    it "writes to standard out when given an argument" do
+      expected = "1\n2\nFizz\n"
+      result = %x(ruby fizz_buzz.rb 3)
+      expect(result).to eq(expected)
+    end
+  end
 end
