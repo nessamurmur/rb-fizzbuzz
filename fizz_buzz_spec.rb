@@ -7,7 +7,7 @@ require 'rantly/rspec_extensions'
 RSpec.describe FizzBuzz do
   it "returns empty array for all numbers < 1" do
     property_of { i = integer; guard i < 1; i}
-      .check { |i| expect(FizzBuzz.call(i)).to eq([]) }
+      .check { |i| expect(FizzBuzz.call(i).to_a.empty?).to be_truthy }
   end
 
   it "replaces multiples of three with \"Fizz\"" do
