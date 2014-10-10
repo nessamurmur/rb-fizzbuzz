@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem 'generative'
+gem 'rake'
 gem 'rspec-core'
 gem 'rspec'
-gem 'rantly', github: 'hayeah/rantly'
+gem 'pry'
